@@ -1,11 +1,11 @@
-<footer class="px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200">
-        <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row">
+<footer class="px-4 pt-12 pb-8 text-white bg-white border-t border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="container flex flex-col justify-between max-w-6xl px-4 mx-auto overflow-hidden lg:flex-row dark:text-gray-300">
             <div class="w-full pl-12 mr-4 text-left lg:w-1/4 sm:text-center sm:pl-0">
                 <a href="/"
                     class="flex justify-center block text-left sm:text-center lg:text-left sm:justify-center">
                     <span class="flex-shrink-0 flex items-center items-center">
                         <img src="{{ asset('images/logo.png') }}" alt="logoLuchaLunaLibre"
-                            class="w-30 h-30">
+                            class="w-40 h-40">
                     </span>
                 </a>
                 <p class="mt-6 mr-4 text-base text-gray-500">{{config('app.name')}} es un blog de lucha libre
@@ -14,33 +14,33 @@
                 </p>
             </div>
             <div class="block w-full pl-10 mt-6 text-sm lg:w-3/4 sm:flex lg:mt-0">
-                <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                    <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
+                <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 dark:text-gray-300 list-none">
+                    <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0 dark:text-gray-300">
                         Product</li>
                     <li><a href="#_"
-                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Features</a>
+                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:hover:text-gray-300">Features</a>
                     </li>
                     <li><a href="#_"
-                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Integrations</a>
+                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:hover:text-gray-300">Integrations</a>
                     </li>
                     <li><a href="#_"
-                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Pricing</a>
+                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:hover:text-gray-300">Pricing</a>
                     </li>
                     <li><a href="#_"
-                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">FAQ</a></li>
+                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:hover:text-gray-300">FAQ</a></li>
                 </ul>
-                <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                    <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
+                <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none ">
+                    <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0 dark:text-gray-300">
                         Company</li>
                     <li><a href="#_"
-                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Privacy</a>
+                            class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:hover:text-gray-300">Privacy</a>
                     </li>
-                    <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Terms
+                    <li><a href="#_" class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600 dark:hover:text-gray-300">Terms
                             of
                             Service</a></li>
                 </ul>
                 <ul class="flex flex-col w-full p-0 font-medium text-left text-gray-700 list-none">
-                    <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0">
+                    <li class="inline-block px-3 py-2 mt-5 font-bold tracking-wide text-gray-800 uppercase md:mt-0 dark:text-gray-300">
                         TailwindCSS
                     </li>
                     <li><a href="https://devdojo.com/tailwindcss/components"
@@ -53,7 +53,7 @@
                             class="inline-block px-3 py-2 text-gray-500 no-underline hover:text-gray-600">Tails</a></li>
                 </ul>
                 <div class="flex flex-col w-full text-gray-700">
-                    <div class="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0">Follow Us</div>
+                    <div class="inline-block px-3 py-2 mt-5 font-bold text-gray-800 uppercase md:mt-0 dark:text-gray-300">Follow Us</div>
                     <div class="flex justify-start pl-4 mt-2">
                         <a class="flex items-center block mr-6 text-gray-400 no-underline hover:text-gray-600"
                             target="_blank" rel="noopener noreferrer" href="https://devdojo.com">
