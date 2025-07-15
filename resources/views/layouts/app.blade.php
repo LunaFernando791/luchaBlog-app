@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
 
         <!-- Styles / Scripts -->
-        
+
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     </head>
@@ -24,11 +24,22 @@
             @yield('content')
         </div>
     </main>
+    @auth
+    <div x-data="{open:false}">
+        <button @click="open = !open" class="fixed z-10  bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 cursor-pointer transition-colors">
+            +
+        </button>
+        <a href="{{route('posts.add')}}" x-show="open" class="fixed z-10 bottom-16 right-4 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-800 cursor-pointer transition-colors">
+            Crear Post
+        </a>
+    </div>
+    @endauth
     <footer>
         @include('components.footer')
     </footer>
 </body>
 </html>
+
 
 
 
