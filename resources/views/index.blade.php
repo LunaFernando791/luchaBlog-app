@@ -19,17 +19,17 @@
 </div>
 <div class="mt-8 max-w-7xl mx-auto text-gray-800 dark:text-white text-center">
         <h2 class="text-xl font-semibold mt-8 justify-center">Empresas</h2>
-        <div class="flex mt-4 gap-4">
-            <div class="flex w-1/3 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
+        <div class="flex mt-4 gap-4 ">
+            <div class="flex w-1/3 h-20 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center items-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
                 <H3>WWE</H3>
             </div>
-            <div class="flex w-1/3 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
+            <div class="flex w-1/3 h-20 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center items-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
                 <H3>AEW</H3>
             </div>
-            <div class="flex w-1/3 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
+            <div class="flex w-1/3 h-20 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center items-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
                 <H3>Impact Wrestling</H3>
             </div>
-            <div class="flex w-1/3 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
+            <div class="flex w-1/3 h-20 bg-gray-100 dark:bg-gray-800 p-2 rounded-lg shadow-md justify-center items-center cursor-pointer hover:bg-gray-200 hover:shadow-lg dark:hover:bg-gray-700 transition-colors">
                 <H3>NJPW</H3>
             </div>
         </div>
