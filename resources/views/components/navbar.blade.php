@@ -3,7 +3,7 @@
     <div class="flex justify-between h-16">
       <!-- Logo -->
       <div class="flex-shrink-0 flex items-center space-x-4">
-        <img class="h-15 w-auto" src="{{ asset('images/logo.png') }}" alt="Logo">
+        <img class="h-15 w-auto" src="{{ asset('images/logoDark.png') }}" alt="Logo">
         <!-- Application Name -->
         <a href="/" class="text-xl font-bold text-blue-600 dark:text-white">{{ config('app.name') }}</a>
       </div>
@@ -15,15 +15,12 @@
         <!-- Dropdown -->
         <div @mouseenter="dropdownOpen = true" @mouseleave="dropdownOpen = false" class="relative group cursor-pointer">
           <button class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white">Categorías</button>
-          <div x-show="dropdownOpen" class="absolute z-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 rounded-md shadow-lg w-48">
+          <div x-show="dropdownOpen" class="absolute z-10 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 rounded-md shadow-lg w-30">
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">Tech</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">Sports</a>
             <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white">Lifestyle</a>
           </div>
         </div>
-        <button onclick="document.documentElement.classList.toggle('dark')" class="px-4 py-2 bg-blue-500 text-white rounded">
-  Cambiar tema
-</button>
       </div>
       <!-- Mobile toggle -->
       <div class="-mr-2 flex sm:hidden ">
@@ -42,4 +39,3 @@
     <a href="#" class="block px-4 py-2">Lifestyle</a>
   </div>
 </nav>
-

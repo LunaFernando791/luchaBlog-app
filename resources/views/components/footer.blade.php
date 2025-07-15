@@ -4,7 +4,7 @@
                 <a href="/"
                     class="flex justify-center block text-left sm:text-center lg:text-left sm:justify-center">
                     <span class="flex-shrink-0 flex items-center items-center">
-                        <img src="{{ asset('images/logo.png') }}" alt="logoLuchaLunaLibre"
+                        <img src="{{ asset('images/logoDark.png') }}" alt="logoLuchaLunaLibre"
                             class="w-40 h-40">
                     </span>
                 </a>
