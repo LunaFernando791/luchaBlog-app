@@ -5,11 +5,19 @@
 
 @section('content')
 <div class="max-w-2xl mx-auto">
-    <form action="{{ route('posts.store')}}" method="POST">
+    <form action="{{ route('posts.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-4">
             <label for="title" class="block text-gray-700 dark:text-gray-300">Título</label>
             <input type="text" id="title" name="title" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white" required>
+        </div>
+        <div>
+            <label for="excerpt" class="block text-gray-700 dark:text-gray-300">Extracto</label>
+            <textarea id="excerpt" name="excerpt" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white" required></textarea>
+        </div>
+        <div>
+            <label for="image" class="block text-gray-700 dark:text-gray-300">Imagen</label>
+            <input type="file" id="image" name="image" accept="image/*" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-white">
         </div>
         <div class="mb-4  ">
             <label for="content" class="block text-gray-700 dark:text-gray-300">Contenido</label>

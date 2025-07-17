@@ -12,12 +12,10 @@
             <h2 class="text-xl font-semibold text-gray-800 dark:text-white">{{ $post->title }}</h2>
             <p class="text-gray-600 dark:text-gray-400">{{ $post->excerpt }}</p>
             <p class="text-sm text-gray-500 dark:text-gray-300">Autor: {{ $post->author }}</p>
-            <a href="#" class="text-blue-600 hover:underline">Leer más</a>
+            <a href="{{route('posts.show', $post->id)}}" class="text-blue-600 hover:underline">Leer más</a>
         </div>
     @endforeach
     @endif
     {{ $posts->links() }}
 </div>
-
-
 @endsection
