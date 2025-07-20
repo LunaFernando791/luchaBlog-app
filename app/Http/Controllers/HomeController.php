@@ -11,7 +11,7 @@ class HomeController extends Controller
 {
    public function index(): View
    {
-    $posts = DB::table('posts')->where('is_published', true)->paginate(6);
+    $posts = DB::table('posts')->orderByDesc('created_at')->where('is_published', true)->paginate(6);
     $postDestacado = DB::table('posts')->where('is_published', true)->inRandomOrder()->first();
 
     return view('home.index', compact('posts', 'postDestacado'));

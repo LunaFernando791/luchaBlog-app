@@ -12,7 +12,7 @@ class PostController extends Controller
     public function index():View
     {
         return view('posts.index', [
-            'posts' => DB::table('posts')->where('is_published', true)->paginate(5)
+            'posts' => DB::table('posts')->where('is_published', true)->paginate(25)
         ]);
     }
 
@@ -38,7 +38,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
+            'title' => 'bail|required|string|max:10',
             'content' => 'required|string',
             'excerpt' => 'nullable|string|max:255',
             'category_id' => 'required|exists:categories,id'
