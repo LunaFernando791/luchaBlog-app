@@ -18,7 +18,7 @@
                             <div class="flex sm:flex-row flex-col items-start sm:items-center p-4 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200 cursor-pointer">
                                 <div class="justify-center mb-2 sm:mb-0 sm:mr-4">
                                     <img src="{{ asset('storage/' . $post->featured_image) }}" alt="{{ $post->title }}"
-                                        class="w-full sm:w-40 sm:h-40 object-cover rounded-lg mb-2 sm:mb-0 sm:mr-4">
+                                        class="w-full sm:w-100 sm:h-40 object-cover object-top rounded-lg mb-2 sm:mb-0 sm:mr-4">
                                 </div>
                                 <div class="flex-grow">
                                     <h2 class="text-xl font-semibold text-gray-800 dark:text-white ">{{ $post->title }}</h2>

@@ -10,9 +10,10 @@
                 <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">{{ $post->created_at }} •
                     {{ $post->author }}</p>
 
-                <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300">
+                <div class="space-y-4 text-gray-800 dark:text-gray-200">
                     {!! $post->content !!}
                 </div>
+
             </div>
         </article>
 

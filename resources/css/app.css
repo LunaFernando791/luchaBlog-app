@@ -11,5 +11,20 @@
 }
 @custom-variant hover (&:hover);
 
+h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+blockquote {
+    border-left: 4px solid #888;
+    padding-left: 1rem;
+    color: #555;
+    font-style: italic;
+}
+
+
 
 

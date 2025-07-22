@@ -26,8 +26,8 @@ Route::middleware(RoleAccessMiddleware::class . ':admin,writter')->group(functio
     Route::put('/posts/update/{id}', [PostController::class, 'update'])->name('posts.update');
     Route::delete('/posts/destroy/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
-Route::get('/posts/show/{id}', [PostController::class, 'show'])->name('posts.show');
-Route::get('/posts/{marca?}', [PostController::class, 'showIndex'])->name('posts.index');
+Route::get('/posts/show/{id}', [PostController::class, 'show'])->name('posts.show')->whereNumber('id');
+Route::get('/posts/{marca?}', [PostController::class, 'showIndex'])->name('posts.index')->whereNumber('marca')->where('marca', '[0-9]+');
 Route::get('/posts/lookup', [PostController::class, 'lookup'])->name('posts.lookup');
 
 

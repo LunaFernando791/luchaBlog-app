@@ -8,8 +8,9 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+    <script src="//cdn.ckeditor.com/4.21.0/standard/ckeditor.js"></script>
 
-    <!-- Styles / Scripts -->
+	    <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 </head>
@@ -90,6 +91,9 @@
     <footer>
         @include('components.footer')
     </footer>
+    <script>
+        CKEDITOR.replace('editor');
+    </script>
 </body>
 
 </html>
@@ -104,3 +108,4 @@
         event.stopPropagation();
     });
 </script>
+

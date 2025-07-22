@@ -50,6 +50,9 @@ class PostController extends Controller
 
     public function show(int $id): View
     {
+        if (!Post::where('id', $id)->exists()) {
+            abort(404, 'Post not found');
+        }
         return view('posts.show', [
             'post' => DB::table('posts')->where('id', $id)->first()
         ]);
@@ -64,7 +67,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'bail|required|string|max:10',
+            'title' => 'bail|required|string|max:50',
             'content' => 'required|string',
             'excerpt' => 'nullable|string|max:255',
             'category_id' => 'required|exists:categories,id'
