@@ -12,7 +12,7 @@
                 <a href="{{ route('posts.index') }}"
                     class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white">Blog</a>
                 @foreach ($categories as $category)
-                    <a href="#"
+                    <a href="{{ route('posts.index', $category->id) }}"
                         class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-white">{{ $category->name }}</a>
                 @endforeach
                 <div class="flex items-center space-x-4 ">
@@ -45,7 +45,7 @@
                     Blog
                 </a>
                 @foreach ($categories as $category)
-                    <a href="#"
+                    <a href="{{ route('posts.index', ['categoria' => $category->id]) }}"
                         class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-white">
                         {{ $category->name }}
                     </a>

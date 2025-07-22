@@ -23,6 +23,7 @@
          </div>
     </div>
 </div>
+<!--
 <div class="mt-8 max-w-7xl mx-auto text-gray-800 dark:text-white text-center">
         <h2 class="text-xl font-semibold mt-8 justify-center">Empresas</h2>
         <div class="flex mt-4 gap-4 ">
@@ -40,6 +41,7 @@
             </div>
         </div>
 </div>
+-->
 <div class="max-w-7xl mx-auto mt-8 text-gray-800 dark:text-white">
     <h2 class="text-xl font-semibold mt-8 ">Últimos Posts</h2>
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 mt-4">

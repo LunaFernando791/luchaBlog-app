@@ -18,17 +18,19 @@ Route::get('/login', function () {
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-
-Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
-
 Route::middleware(RoleAccessMiddleware::class . ':admin,writter')->group(function (){
     Route::get('/posts/add', [PostController::class, 'add'])->name('posts.add');
     Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
     Route::get('/posts/my-posts', [PostController::class, 'myPosts'])->name('posts.my_posts');
     Route::get('/posts/{id}/edit', [PostController::class, 'edit'])->name('posts.edit');
-    Route::put('/posts/{id}', [PostController::class, 'update'])->name('posts.update');
-    Route::delete('/posts/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
+    Route::put('/posts/update/{id}', [PostController::class, 'update'])->name('posts.update');
+    Route::delete('/posts/destroy/{id}', [PostController::class, 'destroy'])->name('posts.destroy');
 });
+Route::get('/posts/show/{id}', [PostController::class, 'show'])->name('posts.show');
+Route::get('/posts/{marca?}', [PostController::class, 'showIndex'])->name('posts.index');
+Route::get('/posts/lookup', [PostController::class, 'lookup'])->name('posts.lookup');
+
+
 
 Route::middleware(RoleAccessMiddleware::class . ':admin')->group(function (){
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
@@ -40,4 +42,4 @@ Route::middleware(RoleAccessMiddleware::class . ':admin')->group(function (){
     Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('users.destroy');
 });
 
-Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
+

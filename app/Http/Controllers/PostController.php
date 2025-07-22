@@ -9,11 +9,37 @@ use App\Models\Post; // Assuming you have a Post model
 
 class PostController extends Controller
 {
-    public function index():View
+    public function showIndex(Request $request, ?int $categories=null): View
     {
-        return view('posts.index', [
-            'posts' => DB::table('posts')->where('is_published', true)->paginate(25)
-        ]);
+        $search = $request->input('search', '');
+
+        $posts = Post::query()
+        ->where('is_published', true)
+        ->when($categories, fn($q) => $q->where('category_id', $categories))
+        ->when($search, function ($q) use ($search) {
+            $q->where(function ($q2) use ($search) {
+                $q2->where('title', 'like', "%{$search}%")
+                   ->orWhere('excerpt', 'like', "%{$search}%")
+                   ->orWhere('content', 'like', "%{$search}%");
+            });
+        })
+        ->latest()
+        ->paginate(10);
+
+        return view('posts.index', compact('posts'));
+    }
+    public function lookup(Request $request): View
+    {
+        $search = $request->input('search');
+        $posts = Post::query()
+            ->where('is_published', true)
+            ->where(function ($query) use ($search) {
+                $query->where('title', 'like', '%' . $search . '%')
+                      ->orWhere('content', 'like', '%' . $search . '%');
+            })
+            ->paginate(10);
+
+        return view('posts.index', compact('posts'));
     }
 
     public function myPosts():View
